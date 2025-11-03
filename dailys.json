@@ -4,7 +4,7 @@
       "id": "word",
       "name": "Word Themed",
       "icon": "fas fa-font",
-      "description": "Word-based dailys and vocabulary challenges",
+      "description": "Word and vocabulary-based dailys",
       "games": [
         {
           "id": "wordle",
@@ -36,7 +36,7 @@
       "id": "game",
       "name": "Game Themed",
       "icon": "fas fa-gamepad",
-      "description": "Video game themed dailys",
+      "description": "Videogame-based dailys",
       "games": [
         {
           "id": "mcdle",
@@ -88,7 +88,7 @@
       "id": "flag",
       "name": "Flag Themed",
       "icon": "fas fa-flag",
-      "description": "Flag identification and trivia dailys",
+      "description": "Flag-based dailys",
       "games": [
         {
           "id": "flaggle",
@@ -102,7 +102,7 @@
       "id": "food",
       "name": "Food Themed",
       "icon": "fas fa-utensils",
-      "description": "Food and culinary guessing dailys",
+      "description": "Food-based dailys",
       "games": [
         {
           "id": "foodguessr",
