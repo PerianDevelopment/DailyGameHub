@@ -13,7 +13,7 @@
             --bg-dark: #121212;
             --bg-card: #1E1E1E;
             --bg-card-hover: #252525;
-            --bg-card-checked: rgba(76, 175, 80, 0.1);
+            --bg-card-checked: rgba(76, 175, 80, 0.15);
             --text-primary: #FFFFFF;
             --text-secondary: #B0B0B0;
             --border-color: #333333;
@@ -178,7 +178,7 @@
 
         .games-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 20px;
             margin-bottom: 30px;
         }
@@ -190,12 +190,12 @@
             box-shadow: var(--shadow);
             transition: var(--transition);
             display: flex;
-            flex-direction: column;
-            height: 100%;
+            align-items: center;
             position: relative;
             overflow: hidden;
             border: 1px solid transparent;
             cursor: pointer;
+            height: 80px;
         }
 
         .game-card:hover {
@@ -221,17 +221,24 @@
             pointer-events: none;
         }
 
-        .game-header {
+        .game-content {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            width: 100%;
+            justify-content: space-between;
+        }
+
+        .game-info {
+            display: flex;
+            align-items: center;
+            flex: 1;
         }
 
         .game-favicon {
             width: 40px;
             height: 40px;
             border-radius: 8px;
-            margin-right: 12px;
+            margin-right: 15px;
             background: var(--bg-dark);
             display: flex;
             align-items: center;
@@ -239,48 +246,25 @@
             font-size: 18px;
             color: var(--primary);
             overflow: hidden;
+            padding: 8px;
         }
 
         .game-favicon img {
             width: 100%;
             height: 100%;
             object-fit: contain;
-            border-radius: 8px;
+            border-radius: 4px;
         }
 
         .game-title {
             font-size: 18px;
             font-weight: 600;
-            flex: 1;
-        }
-
-        .checkmark {
-            width: 24px;
-            height: 24px;
-            border-radius: 50%;
-            border: 2px solid var(--border-color);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
             transition: var(--transition);
-            flex-shrink: 0;
         }
 
-        .checkmark:hover {
-            border-color: var(--primary);
-            transform: scale(1.1);
-        }
-
-        .checkmark.checked {
-            background: var(--success);
-            border-color: var(--success);
-        }
-
-        .checkmark.checked i {
-            display: block;
-            color: white;
-            font-size: 12px;
+        .game-card.checked .game-title {
+            text-decoration: line-through;
+            color: var(--text-secondary);
         }
 
         .game-link {
@@ -294,13 +278,12 @@
             border-radius: 6px;
             background: rgba(255, 56, 46, 0.1);
             transition: var(--transition);
-            align-self: flex-start;
-            margin-top: auto;
+            flex-shrink: 0;
         }
 
         .game-link:hover {
             background: rgba(255, 56, 46, 0.2);
-            transform: translateX(5px);
+            transform: translateX(3px);
         }
 
         /* Footer */
@@ -355,6 +338,21 @@
 
             .games-grid {
                 grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+
+            .game-card {
+                height: auto;
+                padding: 15px;
+            }
+
+            .game-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+
+            .game-link {
+                align-self: flex-end;
             }
         }
 
@@ -668,21 +666,20 @@
                     
                     return `
                         <div class="game-card ${isChecked ? 'checked' : ''}" data-game-id="${game.id}">
-                            <div class="game-header">
-                                <div class="game-favicon">
-                                    ${game.favicon ? 
-                                        `<img src="${game.favicon}" alt="${game.name} icon" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\\'fas fa-gamepad\\'></i>';">` : 
-                                        `<i class="fas fa-gamepad"></i>`
-                                    }
+                            <div class="game-content">
+                                <div class="game-info">
+                                    <div class="game-favicon">
+                                        ${game.favicon ? 
+                                            `<img src="${game.favicon}" alt="${game.name} icon" onerror="this.style.display='none'; this.parentNode.innerHTML='<i class=\\'fas fa-gamepad\\'></i>';">` : 
+                                            `<i class="fas fa-gamepad"></i>`
+                                        }
+                                    </div>
+                                    <div class="game-title">${game.name}</div>
                                 </div>
-                                <div class="game-title">${game.name}</div>
-                                <div class="checkmark ${isChecked ? 'checked' : ''}">
-                                    <i class="fas fa-check"></i>
-                                </div>
+                                <a href="${game.url}" target="_blank" class="game-link">
+                                    Play Now <i class="fas fa-external-link-alt"></i>
+                                </a>
                             </div>
-                            <a href="${game.url}" target="_blank" class="game-link">
-                                Play Now <i class="fas fa-external-link-alt"></i>
-                            </a>
                         </div>
                     `;
                 }).join('');
