@@ -167,7 +167,7 @@
     {
       "id": "anime",
       "name": "Anime Themed",
-      "icon": "fas fa-tv",
+      "icon": "fas fa-eye",
       "description": "Anime-based dailys",
       "games": [
         {
