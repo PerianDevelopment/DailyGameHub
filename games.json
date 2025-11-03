@@ -4,7 +4,7 @@
       "id": "word",
       "name": "Word Themed",
       "icon": "fas fa-font",
-      "description": "Word-based puzzles and vocabulary challenges",
+      "description": "Word-based dailys and vocabulary challenges",
       "games": [
         {
           "id": "wordle",
@@ -36,7 +36,7 @@
       "id": "game",
       "name": "Game Themed",
       "icon": "fas fa-gamepad",
-      "description": "Video game themed puzzles",
+      "description": "Video game themed dailys",
       "games": [
         {
           "id": "mcdle",
@@ -56,7 +56,7 @@
       "id": "geography",
       "name": "Geography Themed",
       "icon": "fas fa-globe-americas",
-      "description": "Geography and location-based puzzles",
+      "description": "Geography and location-based dailys",
       "games": [
         {
           "id": "geodle",
@@ -88,7 +88,7 @@
       "id": "flag",
       "name": "Flag Themed",
       "icon": "fas fa-flag",
-      "description": "Flag identification and trivia games",
+      "description": "Flag identification and trivia dailys",
       "games": [
         {
           "id": "flaggle",
@@ -102,7 +102,7 @@
       "id": "food",
       "name": "Food Themed",
       "icon": "fas fa-utensils",
-      "description": "Food and culinary guessing games",
+      "description": "Food and culinary guessing dailys",
       "games": [
         {
           "id": "foodguessr",
@@ -122,7 +122,7 @@
       "id": "music",
       "name": "Music Themed",
       "icon": "fas fa-music",
-      "description": "Music and audio-based puzzles",
+      "description": "Music and audio-based dailys",
       "games": [
         {
           "id": "songless",
@@ -136,7 +136,7 @@
       "id": "estimation",
       "name": "Estimation Themed",
       "icon": "fas fa-chart-line",
-      "description": "Estimation and number-based puzzles",
+      "description": "Estimation and number-based dailys",
       "games": [
         {
           "id": "moreless",
