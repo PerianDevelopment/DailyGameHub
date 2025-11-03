@@ -49,6 +49,12 @@
           "name": "Minecraftle",
           "url": "https://minecraftle.zachmanson.com/",
           "favicon": "https://minecraftle.zachmanson.com/favicon.ico"
+        },
+        {
+          "id": "loldle",
+          "name": "Loldle",
+          "url": "https://loldle.net/",
+          "favicon": "https://loldle.net/favicon.ico"
         }
       ]
     },
