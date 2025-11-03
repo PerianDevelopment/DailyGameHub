@@ -167,8 +167,8 @@ header {
 }
 
 .section-checkmark {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     border: 2px solid var(--border-color);
     display: flex;
@@ -190,6 +190,10 @@ header {
     display: block;
     color: white;
     font-size: 10px;
+}
+
+.section-checkmark:not(.checked) i {
+    display: none;
 }
 
 .collapse-icon {
