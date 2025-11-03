@@ -55,6 +55,12 @@
           "name": "Loldle",
           "url": "https://loldle.net/",
           "favicon": "https://loldle.net/favicon.ico"
+        },
+        {
+          "id": "royaledle",
+          "name": "Royaledle",
+          "url": "https://royaledle.com/",
+          "favicon": "https://royaledle.com/favicon.ico"
         }
       ]
     },
