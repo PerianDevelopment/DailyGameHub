@@ -12,6 +12,12 @@ let collapsedSections = {};
 async function init() {
     await loadGamesData();
     loadCheckedGames();
+    
+    // Initialize all sections as collapsed
+    gamesData.topics.forEach(topic => {
+        collapsedSections[topic.id] = true;
+    });
+    
     renderGames();
     setupEventListeners();
 }
@@ -107,7 +113,7 @@ function renderGames() {
         topicElement.setAttribute('data-topic-id', topic.id);
         
         const isTopicComplete = isTopicCompleted(topic);
-        const isCollapsed = collapsedSections[topic.id];
+        const isCollapsed = collapsedSections[topic.id] || true; // Default to collapsed
         
         const gamesGrid = topic.games.map(game => {
             const isChecked = checkedGames[game.id] || false;
